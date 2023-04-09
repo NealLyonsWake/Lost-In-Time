@@ -35,17 +35,10 @@ public class ParallaxEffect : MonoBehaviour
 
     void Update()
     {
-        // Record how far the camera has moved
-        float temp = (cam.position.x * (1-parallax));
-
         // Make a temporary variable that measures the distance from the start point
         float dist = (cam.position.x * parallax);
 
         // Change the position reletive to cam position, start position and parallax level
         transform.position = new Vector3(startPos + dist, transform.position.y, transform.position.z);
-
-        // Adjust the start position pending left or right away from the camera
-        if (temp > startPos + length) startPos += (length*2);
-        else if (temp < startPos - length) startPos -= (length*2);
     }
 }
