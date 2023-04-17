@@ -23,14 +23,39 @@ public class PlayerMovement : MonoBehaviour
     // Declare the animator
     private Animator animator;
 
+    private bool moveAllowed = false;
+    private bool awake = false;
+    private bool timeJumping = false;
+    
     private void Start()
     {
         // Set the animator
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();            
+    }
+
+    public void SetGetUp()
+    {
+        animator.SetBool("isAwake", true);
+    }
+
+    public void SetMove(bool decision, bool timeJump)
+    {
+        moveAllowed = decision;
+        timeJumping = timeJump;
     }
 
     void Update()
     {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle") && !awake && !timeJumping)
+        {
+            awake = true;
+            SetMove(true, false);
+            
+        }
+        
+
+        if (moveAllowed) 
+        { 
         // Get player input
         horiz = Input.GetAxis("Horizontal");
 
@@ -54,11 +79,19 @@ public class PlayerMovement : MonoBehaviour
         }
         else walkingAnimSpeed = 0.0f;
         animator.SetFloat("Movement", walkingAnimSpeed);
+        }
+
+       
     }
 
     private void FixedUpdate()
     {
         // Move the player (includes delta time)
         rb.velocity = new Vector2(horiz * speed, rb.velocity.y);
+
+        if (timeJumping)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 1);
+        }
     }
 }
