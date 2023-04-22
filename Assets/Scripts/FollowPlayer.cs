@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// Follow the player transform on the x-axis (the y-axis will remain the same for this game)
+/// Follow the player transform on the x-axis (the y-axis will remain the same for this game).
 /// </summary>
 public class FollowPlayer : MonoBehaviour
 {

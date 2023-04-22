@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 /// <summary>
-///
+/// Fade FX for main title at the start of the game. 
 /// </summary>
 public class Fade : MonoBehaviour
 {
@@ -56,5 +56,3 @@ public class Fade : MonoBehaviour
         Destroy(gameObject);
     }
 }
-
-

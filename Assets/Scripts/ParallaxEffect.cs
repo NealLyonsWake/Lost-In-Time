@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// Parallex effect for the environment background and sky
+/// Parallex effect for the environment background and sky.
 /// Cite: Unity Parallax Tutorial - How to infinite scrolling background, Dani:
 /// https://www.youtube.com/watch?v=zit45k6CUMk
 /// </summary>
