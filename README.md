@@ -15,7 +15,7 @@ The game is available to download for Windows via my [Itch page.](https://waken-
 
 ## How was it made?
 
-I chose the Unity engine, coding in C# and created art in Blender. I created a Miro board to manage the project which is available to view [here.](https://miro.com/app/board/uXjVMQb673Q=/?share_link_id=48528454893)
+I chose the Unity engine, coding in C# and created art in Inkscape. I created a Miro board to manage the project which is available to view [here.](https://miro.com/app/board/uXjVMQb673Q=/?share_link_id=48528454893)
 
 ## Can you pull this repo?
 
